@@ -6,13 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BITM Project 1</title>
     <link rel="stylesheet" href="lib/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
+<!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.helper.ie8.js"></script><![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
     <script src="lib/main.js"></script>
 </head>
 <body class="container">
     <nav>
-        <a href="#">
-            <img id="brand" src="image/logo.png" alt="">
+        <a class="clearfix" href="#">
+            <img src="image/logo.png" alt="">
         </a>
+        <a href="#" class="nav-toggle">&#9776;</a>
         <ul>
             <li><a href="index.html">HOME</a></li>
             <li><a href="about.html">ABOUT</a></li>
@@ -27,11 +31,28 @@
     <section id="content">
         <h1>Slider</h1>
         <hr>
-        
+        <div class="slider">
+            <div class="my-slider">
+                <img src="image/php.jpg" alt="">
+                <img src="image/python.jpg" alt="">
+                <img src="image/php2.jpg" alt="">
+            </div>
+        </div>
     </section>
 
     <footer>
         Copyright 2019 &copy; Pranta Saha
     </footer>
+    <script type="text/javascript">
+        window.onload = ()=>{
+            var slider = tns({
+                container: '.my-slider',
+                items: 1,
+                slideBy: 'page',
+                autoplay: true,
+                controls:false
+            });
+        }
+    </script>
 </body>
 </html>
