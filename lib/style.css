@@ -1,269 +1,318 @@
 * {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 body {
-	line-height: 1;
+  line-height: 1;
+  --yellow: #ffd700;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
 
 /* CSS for Home page */
-.container{
-    min-height: 100vh;
+.container {
+  min-height: 100vh;
 }
-.container-m{
-    padding:5px;
-    margin: 0 15px;
+.container-m {
+  padding: 5px;
+  margin: 0 15px;
 }
-nav{
-    width: 100%;
-    background: rgb(252, 252, 252);
-    height:60px;
-    position: relative;
+nav {
+  width: 100%;
+  background: rgb(252, 252, 252);
+  height: 60px;
+  position: relative;
 }
-nav img{
-    width: 120px;
-    top: -5px;
-    position: absolute;
-    margin-left: 10px;
+nav img {
+  width: 120px;
+  top: -5px;
+  position: absolute;
+  margin-left: 10px;
 }
-nav .nav-toggle{
-    float: right;
-    font-size: 2em;
-    text-decoration: none;
-    padding: 12px 15px 0 0;
-    display: none;
+nav .nav-toggle {
+  float: right;
+  font-size: 2em;
+  text-decoration: none;
+  padding: 12px 15px 0 0;
+  display: none;
 }
 nav ul {
-    list-style-type: none;
-    margin-right: 20px;
-    float: right;
+  list-style-type: none;
+  margin-right: 20px;
+  float: right;
 }
-nav ul li{
-    float: left;
+nav ul li {
+  float: left;
 }
 nav ul li a {
-    text-decoration: none;
-    display: block;
-    width: 60px;
-    padding:20px;
-    font-weight: bold;
-    color: black;
+  text-decoration: none;
+  display: block;
+  width: 60px;
+  padding: 20px;
+  font-weight: bold;
+  color: black;
 }
-nav ul li a:hover{
-    background-color: #ffd700;
-    color: white;
-}
-
-.active{
-    background-color: rgb(245, 227, 146);
-    color: black;
-}
-.banner img{
-    width:100%;
-    top:-5px;
-    height: auto;
-    position: relative;
-}
-#content{
-    padding: 20px 2px 40px 2px;
-}
-#content h1{
-    text-align: center;
-    padding: 10px;
-    font-size: 30px;
-}
-.row{
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    justify-content:center;
-    align-items: center;
-}
-.card{
-    width:300px;
-    background-color: rgb(229, 245, 245);
-    margin:15px;
-    text-align: center;
-    display: inline-block;
-    position: relative;
-    box-shadow: 0px 1px 23px -14px rgba(0,0,0,0.75);
-    border-bottom: 3px solid rgba(255, 162, 162, 0.45);
-}
-.card .label{
-    width:50px;
-    text-align: center;
-    font-size: 16px;
-    position: absolute;
-    color:white;
-    height: 20px;
-    border-radius: 50%;
-    background-color:rgb(245, 22, 96);
-    top:-15px;
-    float: right;
-    left:90%;
-    padding:10px 0;
-    font-weight:bold;
-    border:1px solid yellow;
-    box-shadow: 0px 1px 10px 1px rgba(255, 0, 0, 0.3);
-}
-.card img{
-    width:100%;
-    height: 180px;
-}
-.card a,.button{
-    text-decoration: none;
-    padding:10px 20px;
-    margin: 10px 0;
-    background-color: #ffd700;
-    height:60px;
-    box-shadow: 0 0 4px #999;
-    border: none;
-    border-radius: 2px;
-    font-size: 16px;
-    text-transform: uppercase;
-    color: black;
-    cursor: pointer;
-}
-.card .details{
-    padding: 10px;
-    margin:10px 0;
-}
-.card .card-title{
-    font-weight: bold;
-    padding: 0  0 15px 0;
-    color: rgb(86, 86, 243);
-    font-size: 1.2em;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 2px rgba(243, 247, 14, 0.774);
+nav ul li a:hover {
+  background-color: var(--yellow);
+  color: white;
 }
 
-.card .card-title-small{
-    color: rgb(110, 110, 110);
-    font-size:1.1em;
-    font-weight: bold;
-    padding-bottom: 15px;
-    margin-top:-10px;
+.active {
+  background-color: rgb(245, 227, 146);
+  color: black;
 }
-.card .profile-section{
-    padding:35px 0;
+.banner img {
+  width: 100%;
+  top: -5px;
+  height: auto;
+  position: relative;
 }
-.card .profile{
-    width: 160px;
-    height:160px;
-    border-radius:50%;
-    position: absolute;
-    top:-105px;
-    left:21%;
-    background-color: #4e4c3c;
-    border: 2px solid #ffd700;
+#content {
+  padding: 20px 2px 40px 2px;
 }
-.card .profile img{
-    width:100%;
-    height: 100%;
-    border-radius: 50%;
+#content h1 {
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
 }
-footer{
-    position: relative;
-    width: 100%;
-    padding: 10px 0;
-    background-color:cornflowerblue; 
-    bottom: 0;
-    text-align: center;
-    color:white;
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
 }
-.about{
-    margin:20px 50px;
-    text-align: justify;
-    line-height: 1.3em;
-    margin-bottom: 130px;
+.card {
+  width: 300px;
+  background-color: rgb(229, 245, 245);
+  margin: 15px;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  box-shadow: 0px 1px 23px -14px rgba(0, 0, 0, 0.8);
+  border-bottom: 3px solid rgba(255, 140, 140, 0.5);
 }
-.contact-form{
-    margin:20px auto;
-    position: relative;
-    width: 70vh;
-    padding:15px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content:center;
-    box-shadow: 0px 1px 23px -14px rgba(0,0,0,0.75);
+.card .label {
+  width: 50px;
+  text-align: center;
+  font-size: 16px;
+  position: absolute;
+  color: white;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgb(245, 22, 96);
+  top: -15px;
+  float: right;
+  left: 90%;
+  padding: 10px 0;
+  font-weight: bold;
+  border: 1px solid var(--yellow);
+  box-shadow: 0px 1px 10px 1px rgba(255, 0, 0, 0.3);
 }
-.contact-form input, textarea{
-    border:1px solid #dbba00;
-    margin:5px;
-    padding:8px;
+.card img {
+  width: 100%;
+  height: 180px;
 }
-.contact-form button{
-    margin: 5px;
+.card a,
+.button {
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  background-color: var(--yellow);
+  height: 60px;
+  box-shadow: 0 0 4px #999;
+  border: none;
+  border-radius: 2px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: black;
+  cursor: pointer;
+}
+.card .details {
+  padding: 10px;
+  margin: 10px 0;
+}
+.card .card-title {
+  font-weight: bolder;
+  padding: 0 0 15px 0;
+  color: rgb(72, 72, 255);
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px rgba(243, 247, 14, 0.7);
+}
+
+.card .card-title-small {
+  color: rgb(110, 110, 110);
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-bottom: 15px;
+  margin-top: -10px;
+}
+.card .profile-section {
+  padding: 35px 0;
+}
+.card .profile {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  position: absolute;
+  top: -105px;
+  left: 21%;
+  background-color: #4e4c3c;
+  border: 2px solid var(--yellow);
+}
+.card .profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+footer {
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  background-color: cornflowerblue;
+  bottom: 0;
+  text-align: center;
+  color: white;
+}
+footer > a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.about {
+  margin: 20px 50px;
+  text-align: justify;
+  line-height: 1.3em;
+  margin-bottom: 130px;
+}
+.contact-form {
+  margin: 20px auto;
+  position: relative;
+  width: 70vh;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  box-shadow: 0px 1px 23px -14px rgba(0, 0, 0, 0.75);
+}
+.contact-form input,
+textarea {
+  border: 1px solid #dbba00;
+  margin: 5px;
+  padding: 8px;
+}
+.contact-form button {
+  margin: 5px;
 }
 .slider {
-    width:60%;
-    margin:0 auto;
-    position: relative;
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
 }
-button[data-action]{
-    display: none;
+button[data-action] {
+  display: none;
 }
-.tns-nav{
-    position: absolute;
-    bottom: 40px;
-    margin-left:50%;
-    z-index:90;
+.tns-nav {
+  display: none;
 }
 
-hr{
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+.tns-controls button {
+  font-size: 2px;
+  border: none;
+  outline: none;
+  color: white;
+  background: white;
+}
+.tns-controls button[data-controls='prev']::after {
+  content: '>';
+  visibility: visible;
+  position: absolute;
+  z-index: 200;
+  font-size: 15em;
+  background: #5e5e5d70;
+  padding: 28% 5px;
+  margin: 5px 0 0 0;
+  right: 0;
+  color: white;
+  outline: none;
+}
+.tns-controls button[data-controls='next']::after {
+  content: '<';
+  visibility: visible;
+  position: absolute;
+  z-index: 200;
+  font-size: 15em;
+  background: #5e5e5d70;
+  padding: 28% 5px;
+  margin: 5px 0 0 0;
+  left: 0;
+  color: white;
+  outline: none;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
 }
 .clearfix::after {
-  content: "";
+  content: '';
   clear: both;
   display: table;
 }
 @media only screen and (max-width: 768px) {
-    .row{
-        flex-direction: column;
-        flex-wrap:wrap;
-        align-items: center;
-    }
-    .profiles > .row > .card{
-        margin:70px;
-    }
-    nav ul{
-        display: none;
-    }
-    nav .nav-toggle{
-        display: block;
-    }
-    .about{
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-    .menu {
-        display: block;
-        visibility: display;
-        display: flex;
-        flex-direction: column;
-        margin-top: 55px;
-        position: absolute;
-        z-index: 10;
-        background: white;
-        width: 100%;
-        border-bottom: 2px solid rgba(153, 153, 153, 0.45);
-    }
-    .menu li a{
-        padding:8px;
-        border-bottom: 1px dotted rgb(192, 192, 192);
-        width: 100%;
-    }
+  .row {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
   }
- 
+  .profiles > .row > .card {
+    margin: 70px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav .nav-toggle {
+    display: block;
+  }
+  .about {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .menu {
+    display: block;
+    visibility: display;
+    display: flex;
+    flex-direction: column;
+    margin-top: 55px;
+    position: absolute;
+    z-index: 10;
+    background: white;
+    width: 100%;
+    border-bottom: 2px solid rgba(153, 153, 153, 0.45);
+  }
+  .menu li a {
+    padding: 8px;
+    border-bottom: 1px dotted rgb(192, 192, 192);
+    width: 100%;
+  }
+  .tns-controls button[data-controls='prev']::after {
+    font-size: 12px;
+  }
+  .tns-controls button[data-controls='next']::after {
+    font-size: 12px;
+  }
+}
