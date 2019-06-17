@@ -1,17 +1,4 @@
-/* CSS RESET */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+* {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -19,28 +6,14 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+
 body {
 	line-height: 1;
 }
 ol, ul {
 	list-style: none;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
 /* CSS for Home page */
 .container{
     min-height: 100vh;
@@ -112,6 +85,7 @@ nav ul li a:hover{
     flex-direction: row;
     flex-grow: 1;
     justify-content:center;
+    align-items: center;
 }
 .card{
     width:300px;
@@ -223,6 +197,7 @@ footer{
     box-shadow: 0px 1px 23px -14px rgba(0,0,0,0.75);
 }
 .contact-form input, textarea{
+    border:1px solid #dbba00;
     margin:5px;
     padding:8px;
 }
@@ -239,23 +214,11 @@ button[data-action]{
 }
 .tns-nav{
     position: absolute;
-    bottom: 70px;
+    bottom: 40px;
     margin-left:50%;
     z-index:90;
 }
-/* Ripple effect */
-.ripple {
-    background-position: center;
-    transition: background 0.8s;
-}
-.ripple:hover {
-    background: #ffd700 radial-gradient(circle, transparent 1%, #ffd700 1%) center/15000%;
-}
-.ripple:active {
-    background-color: #fdea7f;
-    background-size: 100%;
-    transition: background 0s;
-}
+
 hr{
     border: 0;
     height: 1px;
@@ -267,16 +230,23 @@ hr{
   display: table;
 }
 @media only screen and (max-width: 768px) {
-    /* For mobile phones: */
     .row{
         flex-direction: column;
+        flex-wrap:wrap;
         align-items: center;
+    }
+    .profiles > .row > .card{
+        margin:70px;
     }
     nav ul{
         display: none;
     }
     nav .nav-toggle{
         display: block;
+    }
+    .about{
+        margin-left: 20px;
+        margin-right: 20px;
     }
     .menu {
         display: block;
@@ -291,9 +261,8 @@ hr{
         border-bottom: 2px solid rgba(153, 153, 153, 0.45);
     }
     .menu li a{
-        padding:5px;
-        border-bottom: 1px dotted #999;
-        /* margin:5px; */
+        padding:8px;
+        border-bottom: 1px dotted rgb(192, 192, 192);
         width: 100%;
     }
   }
