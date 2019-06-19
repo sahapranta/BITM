@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>BITM Project 1</title>
+    <link rel="stylesheet" href="lib/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
+  </head>
+  <body class="container">
+    <nav>
+      <a class="clearfix" href="#">
+        <img src="image/logo.png" alt="" />
+      </a>
+      <a href="#" class="nav-toggle">&#9776;</a>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="slider.html" class="active">SLIDER</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+    <section class="banner">
+      <img src="image/banner.jpg" alt="" />
+    </section>
+
+    <section id="content">
+      <h1>Slider</h1>
+      <hr />
+      <div class="slider">
+        <div class="my-slider">
+          <img src="image/php.jpg" alt="" />
+          <img src="image/python.jpg" alt="" />
+          <img src="image/mango.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Copyright 2019 &copy;
+      <a href="https://github.com/sahapranta">Pranta Saha</a>
+    </footer>
+    <script type="text/javascript">
+      window.onload = () => {
+        let toggler = document.querySelector('.nav-toggle');
+        toggler.addEventListener('click', function() {
+          this.nextElementSibling.classList.toggle('menu');
+        });
+
+        var slider = tns({
+          container: '.my-slider',
+          items: 1,
+          slideBy: 'page',
+          autoplay: true
+          // controls: false
+        });
+      };
+    </script>
+  </body>
+</html>
