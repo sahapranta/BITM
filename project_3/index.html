@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VUE Todo App</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div id="app" class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Title</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+      </div>
+      <section class="mdl-layout__content mdl-color--grey-100">
+        <div class="page-content">
+          <h3>TODO VUE</h3>
+          <div class="mdl-card mdl-shadow--2dp">
+            <div class="mdl-textfield mdl-js-textfield">
+              <input
+                type="text"
+                v-model="input"
+                class="input"
+                placeholder="Todo to add..."
+              />
+            </div>
+            <button
+              class="mdl-button mdl-button-mini mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+              value="ADD"
+              v-on:click="addTodo"
+            >
+              <i class="material-icons">add</i>
+            </button>
+
+            <ul class="mdl-list" v-if="todos.length > 0">
+              <li v-for="(todo,i) in todos" class="mdl-list__item">
+                <span class="mdl-list__item-primary-action">
+                  <label
+                    class="mdl-switch mdl-js-switch mdl-js-ripple-effect"
+                    v-bind:for="i"
+                  ></label>
+                  <input
+                    type="checkbox"
+                    v-bind:id="i"
+                    v-model="todo.checked"
+                    v-on:click="check(i)"
+                    class="mdl-switch__input"
+                  />
+                </span>
+                <span class="mdl-list__item-primary-content"
+                  ><span
+                    v-bind:class="{checked:todo.checked}"
+                    v-on:dblclick="edit"
+                    >{{ todo.text }}</span
+                  >
+                  <span class="edit hide"
+                    ><input type="text" v-model="todo.text"/><input
+                      type="button"
+                      value="ok"
+                      v-on:click="toggleEdit"
+                  /></span>
+                </span>
+                <span class="mdl-list__item-secondary-action">
+                  <i class="material-icons" v-on:click="delTodo(i)">delete</i>
+                </span>
+              </li>
+            </ul>
+            <h3 v-else>No Todo</h3>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
