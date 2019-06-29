@@ -1,0 +1,233 @@
+.section {
+	padding: 50px 0;
+}
+
+/******** Navigation Section *****/
+
+#navigation {
+	background: #2d3436;
+	padding: 10px;
+
+}
+#navigation li a {
+	color: white;
+	padding-left: 50px;
+
+}
+#navigation li a:hover {
+	color: #55efc4;
+}
+
+.navbar-toggler-icon {
+	background: url(../img/icons/menu.png);
+	background-size: cover;
+}
+
+/****** About Section *****/
+
+.headerSection {
+	background: #2d3436;
+
+}
+.headerSection h1, h2, h3 {
+	color: #fff;
+}
+.headerSection p {
+	color: #dfe6e9;
+}
+
+.headerSection h1 {
+	font-size: 60px;
+}
+.headImage {
+	max-width: 100%;
+}
+
+.body1Section h3 {
+	color: black;
+}
+.body1Section p {
+	font-size: 20px;
+	padding-top: 20px;
+}
+.body1Section h4 {
+	color: red;
+}
+.explore {
+	color: red;
+	font-size: 20px;
+}
+
+.body1Section a {
+	text-decoration: none;
+}
+.aboutSection {
+	background: #dfe6e9;
+}
+
+.aboutHeading p {
+	text-align: center;
+	padding-left: 100px;
+}
+.aboutContent {
+	padding: 20px 0;
+}
+.aboutbodyimage img {
+	text-align: right;
+}
+.eventSection {
+	background: #0652DD;
+	color: white;
+}
+.eventSection a {
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+	padding: 10px 20px;	
+}
+.evnt {
+	padding: 50px;
+}
+.sponsorLogo {
+	float: left;
+	padding: 35px;
+	height: 124px;
+	width: 20%;
+
+}
+.sponsor {
+	overflow: hidden;
+}
+
+/***** Speaker section ******/
+
+
+.speakerimage img {
+	width: 350px;
+	height: 400px;
+	overflow: hidden;
+}
+
+.speakerimage ul {
+	list-style-type: none;
+}
+.speakerimage li {
+	float: left;
+}
+.speakerimage li a {
+	text-decoration: none;
+	padding: 5px;
+	display: block;
+	text-align: center;
+}
+
+
+
+
+
+
+
+/****** Customer Section *****/
+
+.customerSection {
+	background: black;
+	color: white;
+}
+.customerSection a {
+	text-decoration: none;
+	color: white;
+	border: 1px solid white;
+	padding: 10px 20px;	
+}
+.evnt {
+	padding: 50px;
+}
+
+
+/******* Recent Post *******/
+
+.recentPost {
+	background: #dcdde1;
+}
+.recentPost h1 {
+	font-weight: 200;
+	padding-bottom: 10px;
+}
+.recentContent h5 {
+	font-size: 13px;
+	padding: 20px;
+}
+.recentContent p {
+	font-size: 13px;
+}
+.recentimage {
+	height: 120px;
+	background-color: #444;
+	background-size: cover;
+	
+}
+.bodycontent a {
+	text-decoration: none;
+	color: #444;
+}
+.bodycontent a:hover {
+	color: #e84118;
+}
+
+/****** Event One Section ******/
+
+.eventOne {
+	background: #726f79;
+	color: white;
+}
+.eventbody {
+	height: 150px;
+	background-color: #EE5A24;
+}
+.eventbody h3 {
+	padding: 20px;
+}
+
+/******* footer Section ******/
+
+.footerSection {
+	background: #b1b1b4;
+	padding-top: 20px;
+}
+#formaction p {
+	color: white;
+}
+.formInput input {
+	background: #576574;
+	border: 1px solid #576574;
+}
+.formInput button {
+	background: #EE5A24;
+	border: 1px solid #EE5A24;
+}
+
+.socialLink ul {
+	list-style-type: none;
+	
+
+}
+.socialLink ul li {
+	float: left;
+
+}
+.socialLink ul li a {
+	padding: 20px;
+	text-decoration: none;
+	display: block;
+	color: #c8d6e5;
+	padding: 10px 20px;
+}
+.socialLink li a:hover {
+	color: #c8d6e5;
+}
+.foot {
+	color: #c8d6e5;
+}
+
+
+
