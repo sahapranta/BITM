@@ -1,5 +1,5 @@
 window.onload = () => {
-  var app = new Vue({
+  new Vue({
     el: '#app',
     data: {
       input: '',
