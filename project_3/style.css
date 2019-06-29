@@ -1,5 +1,8 @@
 h3 {
   text-align: center;
+  font-weight: 800;
+  color: #e97078;
+  text-shadow: 1px 3px 5px rgba(48, 48, 48, 0.5);
 }
 
 ul li .checked {
@@ -20,7 +23,7 @@ ul li .checked {
 }
 
 .mdl-button {
-  width: 10px;
+  width: 5px;
   position: absolute;
   right: 2px;
   top: 10px;
@@ -31,10 +34,29 @@ ul li .checked {
   margin-top: -10px;
   padding: 5px;
   width: 78%;
+  border: none;
+  border-bottom: 1px dashed #aaa;
 }
 input {
   outline: none;
 }
 .mdl-list {
   margin-top: -10px;
+}
+dialog {
+  position: absolute;
+  z-index: 100;
+  top: 15%;
+  background: rgb(110, 100, 140);
+  color: white;
+  font-size: 1.2em;
+  padding: 20px 40px;
+}
+.dialog-close {
+  float: right;
+  background: red;
+  padding: 0 6px 2px 6px;
+  border-radius: 50%;
+  box-shadow: 1px 0 15px 1px #aaa;
+  cursor: pointer;
 }

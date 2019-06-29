@@ -21,7 +21,7 @@
   <body>
     <div id="app" class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
       <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Title</span>
+        <span class="mdl-layout-title">Todo Vue</span>
         <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="">Link</a>
           <a class="mdl-navigation__link" href="">Link</a>
@@ -38,13 +38,13 @@
                 type="text"
                 v-model="input"
                 class="input"
-                placeholder="Todo to add..."
+                placeholder="type your todo..."
               />
             </div>
             <button
               class="mdl-button mdl-button-mini mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
               value="ADD"
-              v-on:click="addTodo"
+              @click="addTodo"
             >
               <i class="material-icons">add</i>
             </button>
@@ -54,31 +54,29 @@
                 <span class="mdl-list__item-primary-action">
                   <label
                     class="mdl-switch mdl-js-switch mdl-js-ripple-effect"
-                    v-bind:for="i"
+                    :for="i"
                   >
                   <input
                     type="checkbox"
-                    v-bind:id="i"
-                    v-model="todo.checked"
-                    v-on:click="check(i)"
+                    :checked="todo.checked" :id="i"  @change="check(i)"
                     class="mdl-switch__input"
                   />
                 </span>
                 <span class="mdl-list__item-primary-content"
                   ><span
-                    v-bind:class="{checked:todo.checked}"
-                    v-on:dblclick="edit"
+                    :class="{checked:todo.checked}"
+                    @dblclick="edit"
                     >{{ todo.text }}</span
                   >
                   <span class="edit hide"
                     ><input type="text" v-model="todo.text"/><input
                       type="button"
                       value="ok"
-                      v-on:click="toggleEdit"
+                      @click="toggleEdit"
                   /></span>
                 </span>
                 <span class="mdl-list__item-secondary-action">
-                  <i class="material-icons" v-on:click="delTodo(i)">delete</i>
+                  <i class="material-icons" @click="delTodo(i)">delete</i>
                 </span>
               </li>
             </ul>
@@ -86,6 +84,23 @@
           </div>
         </div>
       </main>
+      <dialog class="mdl-dialog">
+          VUE Powered Todo App. <span class="dialog-close">x</span>
+          <ul>
+              <li>You can Create Todo</li>
+              <li>A todo item can be checked</li>
+              <li>A todo item can be removed</li>
+              <li>Can be updated (dbl click)</li>
+              <li>Todos are fetched from jsonplaceholder limit <select v-model="limit" @change="fetchTodo">
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+              </select></li>
+              <li>You may reset limit also</li>
+          </ul>
+          <small>Please suggest me any feature or change to implement.</small>
+       </dialog>
     </div>
   </body>
 </html>
